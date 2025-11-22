@@ -82,7 +82,7 @@ const Stats = () => {
                   <div className="flex items-center space-x-2 mt-1">
                     <code className="bg-gray-100 px-2 py-1 rounded text-sm">{link.code}</code>
                     <button
-                      onClick={() => copyToClipboard(`${window.location.origin}/${link.code}`)}
+                      onClick={() => copyToClipboard(`${import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000'}/${link.code}`)}
                       className="text-blue-600 hover:text-blue-800 text-sm"
                     >
                       Copy URL

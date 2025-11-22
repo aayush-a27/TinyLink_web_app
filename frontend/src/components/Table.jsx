@@ -76,7 +76,7 @@ const Table = ({ links, onLinkDeleted }) => {
                       {link.code}
                     </Link>
                     <button
-                      onClick={() => copyToClipboard(`${window.location.origin}/${link.code}`)}
+                      onClick={() => copyToClipboard(`${import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000'}/${link.code}`)}
                       className="text-gray-400 hover:text-gray-600"
                       title="Copy short URL"
                     >
